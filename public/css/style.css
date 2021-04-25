@@ -1,0 +1,58 @@
+.order_button
+{
+  background-color: #9e0000;
+  font-size: 24px;
+  padding: 14px 40px;
+  border-radius: 8px;
+  color: white;
+  border: 2px solid #9e0000;
+  position: absolute;
+  bottom: 1%;
+  left: 45.5%;
+  cursor: pointer;
+}
+
+.order_button_driver
+{
+  background-color: #9e0000;
+  font-size: 15px;
+  padding: 14px 40px;
+  border-radius: 8px;
+  color: white;
+  border: 2px solid #9e0000;
+  cursor: pointer;
+}
+
+.client_info
+{
+    text-align: center;
+}
+
+.card
+{
+      margin-left: 15em;
+}
+
+.card-header
+{
+  text-align: center;
+  color: #9e0000;
+  font-size: xx-large;
+}
+
+.btn-primary {
+    background-color: #9e0000;
+    border-color: white;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    font-size: x-large;
+    border-radius: 30px;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #9e0000;
+    border: 5px;
+    border-color: #0a58ca;
+}
