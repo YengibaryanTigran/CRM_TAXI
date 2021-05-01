@@ -8,9 +8,32 @@
   </head>
   <body>
 
+    <style media="screen">
+    body {
+      background: url(../img/homepage.jpg);
+          background-repeat: no-repeat;
+          background-position: top center;
+          /* background-size: auto; */
+          background-attachment: fixed;
+          background-size: cover;
+          width: 100%;
+          height: 100%;
+    }
+
+    </style>
+
+    <nav>
+      <h4 class="HomeLogo"><a href="/">Главная</a></h4>
+          <ul>
+               <a href="/login" ><button type="button" class="btn home_button"><b><i>Войти</i></b></button></a>
+          </ul>
+    </nav>
+
+
     <div class="container mt-4">
-          <div class="card" style="width: 40rem;">
-              <div class="card-header">Регистрация</div>
+
+          <div class="card" style="width: 40rem; background: no-repeat; color: white;">
+              <div class="card-header"><b><i>Регистрация</i></b></div>
                 <div class="card-body">
                       {{#if message}}
                         <h4 class="alert alert-danger mt-4">{{message}}</h4>

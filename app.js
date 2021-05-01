@@ -75,6 +75,8 @@ console.log('decrypted: ', decrypted);*/
 io.sockets.on('connection', function(socket)
     {
       /* test start */
+
+
       socket.on('coordinate',function(coordinate,pay,dis,url,input_val)  //harcumenq katarum coordinate ev gin stanalu hamar
       {
         console.log("A: "+coordinate[0],"\nB: "+coordinate[1],"\nPay: "+pay+" AMD","\nDistance: "+dis,"\nurl:"+url,"\nАдрес клиента: "+ input_val[0],"\nАдрес назначения: "+ input_val[1]);
@@ -88,6 +90,9 @@ io.sockets.on('connection', function(socket)
 
       });
 
+      function CoorFun() {
         socket.emit('coordriver',coordinateDriver,payDriver,disDriver,urlDriver,input_val_driver);
-
+        setTimeout(CoorFun,60000);
+      }
+      CoorFun();
 });

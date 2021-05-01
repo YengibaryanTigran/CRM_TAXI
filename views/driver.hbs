@@ -3,9 +3,6 @@
 <head>
     <title>Расчет стоимости поездки</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-    
-
     <link rel="stylesheet" href="/css/style.css">
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=d4397244-79e0-4d76-a58a-f163c9921c85" type="text/javascript"></script>
@@ -25,8 +22,17 @@
 
 
       <div id="map"></div>
-      <div class="client_info"></div>
 
+      <div class="client_info">
+        <h4>
+          <p class="address_A"></p>
+          <p class="address_B"></p>
+          <p class="my_distance"></p>
+          <p class="my_price"></p>
+        </h4>
+        <a href="/" style="position: absolute;bottom: 7%;left: 20%;"><button name="" class="order_button_driver" style="width:225px">На главную</button> </a>
+        <a href="#" target="_blank" id="my_order_button"><button class="order_button_driver">Принять и перейти к маршруту</button></a>
+      </div>
 
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>

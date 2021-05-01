@@ -2,16 +2,52 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
-
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link rel="stylesheet" href="/css/style.css">
     <title></title>
   </head>
   <body>
 
-    <div class="container mt-4">
+    <style media="screen">
+    body {
+      background: url(../img/homepage.jpg);
+          background-repeat: no-repeat;
+          background-position: top center;
+          /* background-size: auto; */
+          background-attachment: fixed;
+          background-size: cover;
+          width: 100%;
+          height: 100%;
+    }
+
+    </style>
+
+    <script type="text/javascript">
+        if({{user}}){
+          window.location.replace('/');
+          document.write('{{user.role}}');
+        }
+
+    </script>
+
+
+    <nav>
+    <h4 class="HomeLogo"><a href="/">Главная</a></h4>
+
+        <ul>
+          {{#if user }}
+            <li><a href="/client">Вызвать такси</a></li>
+            <li><a href="/driver">Водитель</a></li>
+            <li><a href="/auth/logout">Выход</a></li>
+          {{else}}
+            <li><a href="/register"><button type="button" class="btn home_button"><b><i>Зарегистрироваться</i></b></button></a></li>
+          {{/if}}
+        </ul>
+    </nav>
+
+    <div class="container mt-4 loginDiv">
           <div class="card" style="width: 40rem;">
-              <div class="card-header">Вход</div>
+              <div class="card-header"><b>Вход</b></div>
                 <div class="card-body">
                       {{#if message}}
                         <h4 class="alert alert-danger mt-4">{{message}}</h4>
