@@ -8,7 +8,7 @@ var io = ('undefined' === typeof module ? {} : module.exports);
  * Copyright(c) 2011 LearnBoost <dev@learnboost.com>
  * MIT Licensed
  */
-
+ 
 (function (exports, global) {
 
   /**
