@@ -15,7 +15,7 @@ function init() {
     // Создадим панель маршрутизации.
         routePanelControl = new ymaps.control.RoutePanel({
             options: {
-                // Добавим заголовок панели.
+                // Добавим заголовок панели. 
                 showHeader: true,
                 title: 'Расчет стоимости поездки'
             }
