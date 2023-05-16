@@ -1,8 +1,9 @@
-const express = require("express"); //Express
-const path = require("path");
-const mysql = require("mysql"); //MySQL
-const dotenv = require("dotenv"); //DotEnv
-const cookieParser = require('cookie-parser'); //Cookie Parser
+const express = require('express');
+const sql = require('mssql');
+const NodeRSA = require('node-rsa');
+const fs = require('fs');
+const https = require('https');
+const bodyParser = require('body-parser');
 
 dotenv.config({ path: './.env'}); //DotEnv connect
 
@@ -18,6 +19,8 @@ const db = mysql.createConnection({
   password : process.env.DATABASE_PASSWORD,
   database : process.env.DATABASE
 });
+
+
 
 const publicDirectory = path.join(__dirname,'./public');
 app.use(express.static(publicDirectory));  //app -> http
@@ -70,6 +73,15 @@ const encrypted = key.encrypt(text, 'base64');
 console.log('encrypted: ', encrypted);
 const decrypted = key.decrypt(encrypted, 'utf8');
 console.log('decrypted: ', decrypted);*/
+// RSA
+
+const key = new NodeRSA({b: 2048});
+const privateKey = key.exportKey('private');
+const publicKey = key.exportKey('public');
+// Հանրային բանալին ստանալու երթուղի
+app.get('/publicKey', (req, res) => {
+ res.send(publicKey);
+});
 
 
 io.sockets.on('connection', function(socket)
