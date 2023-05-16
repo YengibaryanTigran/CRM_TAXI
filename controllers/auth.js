@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const {promisify} = require('util');
 
-// MySql connect start
+// MySql connect start 
 const db = mysql.createConnection({
   host     : process.env.DATABASE_HOST,
   user     : 'NodeUser',
