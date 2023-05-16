@@ -8,7 +8,7 @@ var BI_RM = "0123456789abcdefghijklmnopqrstuvwxyz";
 function int2char(n) {
     return BI_RM.charAt(n);
 }
-//#region BIT_OPERATIONS
+//#region BIT_OPERATIONS 
 // (public) this & a
 function op_and(x, y) {
     return x & y;
