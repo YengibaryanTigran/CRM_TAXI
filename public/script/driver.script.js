@@ -5,7 +5,7 @@ var payDr,disDr;
 var coordinateDr=[[],[]];
 var input_val_Dr=[[],[]];
 
-
+ 
 function ClientInfo() {
 
 socket.on('coordriver',function(coordinate,pay,dis,url,input_val)  //harcumenq katarum coordinate ev gin stanalu hamar
